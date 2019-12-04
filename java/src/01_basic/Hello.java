@@ -19,25 +19,25 @@
  * 下载jdk-8u231-windows-x64.exe，双击安装之后，在命令行使用java -version 与javac -version确认安装成功
  */
 public class Hello{
-    public static void main(String args[]){
+    public static void main(final String args[]){
         /**
          * System.out.print 不换行
          * System.out.println 换行
          */
         System.out.println("Hello world,Java 1.2!");
 
-        Demo_print A = new Demo_print();
+        final Demo_print A = new Demo_print();
 
         A.A();
         A.A();
         A.A();
 
-        Demo_println AA = new Demo_println();
+        final Demo_println AA = new Demo_println();
 
         AA.A();
         AA.A();
 
-        高勇 bb = new 高勇();
+        final 高勇 bb = new 高勇();
         bb.A();
     }
 }
@@ -63,19 +63,19 @@ public class Hello{
         main函数要求放到类中，是执行的开始。 public static void main
 
   */
-  class Demo_print{
-      public void A(){
-          System.out.print("A");
-      }
-
-  }
-
-  class Demo_println{
+class Demo_print{
     public void A(){
-        System.out.println("A");
+        System.out.print("A");
     }
 
-  }
+}
+
+class Demo_println{
+public void A(){
+    System.out.println("A");
+}
+
+}
 
   /**
    * java Hello执行的Hello.class文件必须在当前目录
@@ -90,76 +90,81 @@ public class Hello{
    */
 
 
-   class IDandKey{
-       // 标志符不能与关键字重合，由字母、下划线领头的包括数字在内的字符串
-       /**
-        * java的关键字好多
-          abstract
-          assert        jdk 1.4 +
-          boolean
-          break
-          byte
-          case
-          catch
-          char
-          class
-          continue
-          const         java实际没有使用到此关键字
-          default
-          do
-          double
-          else
-          extends
-          enum          jdk 1.5 +
-          final
-          finally
-          float
-          for
-          goto           java实际没有使用到此关键字
-          if
-          implements
-          import
-          instanceof
-          int 
-          interface
-          long
-          native
-          new
-          package
-          private
-          protected
-          public
-          return
-          short
-          static
-          synchronized
-          super
-          strictfp
-          this
-          throw
-          throws
-          transient
-          try
-          void
-          volatile
-          while
+class IDandKey{
+    // 标志符不能与关键字重合，由字母、下划线领头的包括数字在内的字符串
+    /**
+    * java的关键字好多
+        abstract
+        assert        jdk 1.4 +
+        boolean
+        break
+        byte
+        case
+        catch
+        char
+        class
+        continue
+        const         java实际没有使用到此关键字
+        default
+        do
+        double
+        else
+        extends
+        enum          jdk 1.5 +
+        final
+        finally
+        float
+        for
+        goto           java实际没有使用到此关键字
+        if
+        implements
+        import
+        instanceof
+        int 
+        interface
+        long
+        native
+        new
+        package
+        private
+        protected
+        public
+        return
+        short
+        static
+        synchronized
+        super
+        strictfp
+        this
+        throw
+        throws
+        transient
+        try
+        void
+        volatile
+        while
 
-          true，false，null 是java重特殊含义的标志符，病未纳入关键字的部分
+        true，false，null 是java重特殊含义的标志符，并未纳入关键字的部分
 
-        */
-
-        public void DumpInfo(){
-            System.out.print("test");
-        }
-
-   }
-
-   /**
-    * java可支持标记符未中文，在1.7之后
     */
-    class 高勇{
-        public void A(){
-            int 高勇女儿 = 3;
-            System.out.println(高勇女儿);
-        }
+
+    public void DumpInfo(){
+        System.out.print("test");
     }
+
+}
+
+/**
+* java可支持标记符未中文，在JDK1.7之后
+
+    如果把关键字也都中文化，估计我们就可以看到汉字编程了，倒是可以考虑下 ：）
+*/
+class 高勇{
+    public void A(){
+        final int 高勇女儿 = 3;
+        System.out.println(高勇女儿);
+    }
+}
+
+
+
