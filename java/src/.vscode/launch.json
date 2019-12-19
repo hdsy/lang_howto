@@ -6,6 +6,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - StringRel",
+            "request": "launch",
+            "mainClass": "StringRel"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - FRTest",
             "request": "launch",
             "mainClass": "FRTest"

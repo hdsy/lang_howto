@@ -1,4 +1,4 @@
-Eclipse、IDEA
+﻿Eclipse、IDEA
     流行的java开发工具
 
 JDT
@@ -38,4 +38,9 @@ JUnit
         是否为true  ：  assetTrue assertNotFalse
         是否相等    ：  assetEqual
 
+
+具体步骤：
+1、下载安装Eclipse Installer； 选择安装 Eclipse IDE for Java Developers
+2、启动Eclipse ，设定以readme.txt文件所在目录为workspace 。生成.metdata目录
+3、
     
