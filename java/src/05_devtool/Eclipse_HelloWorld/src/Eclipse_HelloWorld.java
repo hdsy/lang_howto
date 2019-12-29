@@ -1,10 +1,45 @@
 import java.util.regex.Pattern;
+
+
 import java.util.Arrays;
 import java.util.regex.Matcher;
+
+import ThreadLearning.*;
 
 public class Eclipse_HelloWorld {
 	public static void main(String args[]) {
 		
+		HelloWorldThread objHelloWorldThread = new HelloWorldThread(9);
+		
+		objHelloWorldThread.setName("objHelloWorldThread");
+		
+		objHelloWorldThread.start();
+		
+		
+
+		HelloWorldRunnable objHelloWorldRunnable = new HelloWorldRunnable();
+		
+		Thread objThread = new Thread(objHelloWorldRunnable);
+		
+		objThread.setName("objHelloWorldRunnable");
+
+		objThread.start();
+		
+		Thread aThread = new Thread(objHelloWorldThread,"a");
+		Thread bThread = new Thread(objHelloWorldThread,"b");
+		Thread cThread = new Thread(objHelloWorldThread,"c");
+		
+		aThread.start();
+		bThread.start();
+		cThread.start();
+
+		objHelloWorldThread.dumpInfo();
+		
+		
+		//System.out.println("MainThread:" + Thread.currentThread().getId() + " " + Thread.currentThread().getName());
+		
+		
+		/*
 		CollectionFrame.CollectionTest();
 		CollectionFrame.ListTest();
 		CollectionFrame.SetTest();
@@ -116,14 +151,14 @@ public class Eclipse_HelloWorld {
 		objJavaIO.FileExist("e:\\java\\test\\1.txt");
 		
 		objJavaIO.ListFiles("F:\\git\\github\\lang_howto\\java\\");
-		
+		//*/
 		try (DestroyImpl objDestroyImpl = new DestroyImpl()){			
 			objDestroyImpl.toString();
 		}
 		catch (Exception exp) {
 			exp.printStackTrace();
 		}
-		
+		/*
 		StreamTest objStreamTest = new StreamTest();
 		
 		// byte
